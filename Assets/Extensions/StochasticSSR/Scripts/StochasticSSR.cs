@@ -194,6 +194,7 @@ namespace cCharkes
         public static RenderTexture CreateRenderTexture(int w, int h, int d, RenderTextureFormat f, bool useMipMap, bool generateMipMap, FilterMode filterMode)
         {
             RenderTexture r = new RenderTexture(w, h, d, f);
+            r.name = "StochasticSSR";
             r.filterMode = filterMode;
             r.useMipMap = useMipMap;
             r.autoGenerateMips = generateMipMap;
@@ -217,21 +218,38 @@ namespace cCharkes
             if (temporalBuffer != null)
             {
                 temporalBuffer.Release();
+                DestroyImmediate(temporalBuffer);
                 temporalBuffer = null;
             }
 
             if (mainBuffer0 != null || mainBuffer1 != null)
             {
                 mainBuffer0.Release();
+                DestroyImmediate(mainBuffer0);
                 mainBuffer0 = null;
+
                 mainBuffer1.Release();
+                DestroyImmediate(mainBuffer1);
                 mainBuffer1 = null;
             }
 
             if (mipMapBuffer0 != null)
             {
                 mipMapBuffer0.Release();
+                DestroyImmediate(mipMapBuffer0);
                 mipMapBuffer0 = null;
+            }
+            if (mipMapBuffer1 != null)
+            {
+                mipMapBuffer1.Release();
+                DestroyImmediate(mipMapBuffer1);
+                mipMapBuffer1 = null;
+            }
+            if (mipMapBuffer2 != null)
+            {
+                mipMapBuffer2.Release();
+                DestroyImmediate(mipMapBuffer2);
+                mipMapBuffer2 = null;
             }
         }
 

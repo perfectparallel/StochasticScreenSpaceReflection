@@ -1,7 +1,7 @@
 {
   "name": "com.xerxes1138.sssr",
   "description": "This package adds support for realtime screen space reflections",
-  "displayName": "Stochastic ScreenSpace Reflection for Unity",
+  "displayName": "Stochastic ScreenSpace Reflection",
   "version": "1.0.0",
   "unity": "2019.3"
 }

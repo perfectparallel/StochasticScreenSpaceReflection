@@ -1,8 +1,7 @@
 {
   "name": "com.xerxes1138.sssr",
   "description": "This package adds support for realtime screen space reflections",
-  "displayName": "Stochastic ScreenSpace Reflection",
-  "version": "0.0.0",
-  "unity": "2019.3",
-  "author": "Charles Greivelding Thomas"
+  "displayName": "Stochastic ScreenSpace Reflection (Charles Greivelding Thomas)",
+  "version": "1.0.1",
+  "unity": "2020.1"
 }
